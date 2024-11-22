@@ -1,1 +1,1 @@
-# searchig-algorthim
+# searching-algorithm
