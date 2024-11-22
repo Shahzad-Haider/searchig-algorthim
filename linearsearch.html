@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function linearsearch(array, x) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === x) {
+                    return i;
+                }
+            }
+            return -1;  // elemnet not found
+        }
+        //example
+        const array = [3,7,1, 8,6, 5];
+        const x = 6;
+        const result = linearsearch(array, x);
+
+        if (result !== -1) {
+            console.log(result !== -1
+                ? `Element found at index ${result}`
+                : `Element not found`);
+            document.write(`Element found at index ${result}<br>`);
+        }
+       //Time Complexity is O(n); 
+    </script>
+
+</body>
+
+</html>

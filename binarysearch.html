@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binary Search Example</title>
+  </head>
+
+  <body>
+    <script>
+      function binarySearch(array, x) {
+        let left = 0,
+          right = array.length - 1;
+
+        while (left <= right) {
+          let mid = Math.floor((left + right) / 2);
+
+          if (array[mid] === x) {
+            return mid;
+          } else if (array[mid] < x) {
+            left = mid + 1;
+          } else {
+            right = mid - 1;
+          }
+        }
+        return -1;  //elemnt not found
+      }
+
+      // Example
+      const array = [1, 2, 3, 5, 6, 8,77, 88,];
+      const x = 77;
+      const result = binarySearch(array, x);
+
+      if (result !== -1) {
+        console.log(
+          result !== -1
+            ? `Element ${x} found at index ${result}`
+            : `Element ${x} not found`
+        );
+        document.write(`Element ${x} found at index ${result}<br>`);
+      }
+    </script>
+  </body>
+</html>
